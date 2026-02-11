@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+/* ===== WEBサイトタイトル ===== */
+h2 {
+	color: #2F2C3A;
+}
+
+/* ===== WEBサイトタイトルの前に縦線 ===== */
+h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+  width: 4px;
+  height: 1.4em;
+  background-color:#6A1F2B;
+}
+
+/* ===== WEBサイトを見る ボタン ===== */
+.site-button{
+  background-color: #231815;
+  box-shadow: 0 10px 24px rgba(216, 161, 178, 0.25);
+}
+
+/* hover */
+.site-button:hover{
+  box-shadow: 0 14px 32px rgba(216, 161, 178, 0.35);
+  background-color: #6A1F2B;
+}
+
+.work-summary{
+  background: rgba(255,255,255,0.7);
+}
+
+/* 制作のポイント */
+.pointtitle{
+  color: #6A1F2B;
+}
+
+/* パソコン */
+.pointtitle::before{
+  content: "\1F4BB ";
+}

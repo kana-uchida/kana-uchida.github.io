@@ -1,0 +1,204 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<title>banner_ekieki</title>
+	
+	
+	<link href="../css/base.css" rel="stylesheet" type="text/css">
+	<link href="../css/layout.css" rel="stylesheet" type="text/css">
+	<link href="../css/component.css" rel="stylesheet" type="text/css">
+	<link href="../css/animation.css" rel="stylesheet" type="text/css">
+	<link href="../css/banner_css/banner_ekieki.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div class="container">
+	<!-- ヘッダー -->
+<div class="fixed">
+  <header>
+    <div class="rogoh1">
+      <p class="rogo"><img src="../img/rogo.svg" alt=""/></p>
+      <h1>Kana Uchida’s portfolio</h1>
+    </div>
+	  
+	  <button class="nav-button" aria-label="メニューを開く" aria-expanded="false">
+  <span></span><span></span><span></span>
+</button>
+	  
+<nav>
+  <ul>
+    <li><a href="../index.html">Top</a></li>
+    <li><a href="../index.html#works">Works</a></li>
+    <li><a href="../index.html#about">About</a></li>
+    <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+</nav>
+  </header>
+  <img src="../img/Vector 3.png" class="header-line" alt="">
+</div>
+
+	
+	<p>
+	  <!-- コンテナー -->
+	  <img src="../img/ekieki_mockup.png" width="10630" height="13287" alt=""/></p>
+	<h2>レンタル傘　バナー</h2>
+    
+      <div class="banner-area">
+  <!-- 左：大きい画像 -->
+  <div class="banner-image">
+    <img src="../img/ekieki_bunnersize3.png" alt="">
+  </div>
+
+  <!-- 右：テキスト＋ロゴ -->
+  <div class="banner-text">
+    <p>
+      学校課題として、駅で完結するレンタル傘サービス
+      「えきえきアンブレラ」の告知バナーを制作しました。<br>
+      爽やかな写真とシンプルなコピーで、
+      サービスの手軽さと安心感が伝わるデザインを意識しています。<br><br>
+      こだわりとして、「えきえきアンブレラ」の商品名は
+      イラストレーターでしずくと傘をモチーフに制作しました。
+    </p>
+
+    <img src="../img/ekieki_rogo.png" alt="">
+  </div>
+</div>
+
+    <table width="500">
+    <tbody>
+	    <tr>
+	      <th scope="row">バナー設置場所</th>
+	      <td>地域の情報サイト</td>
+        </tr>
+	    <tr>
+	      <th scope="row">ターゲット</th>
+	      <td>駅を利用している方、バーコード決済を利用の方</td>
+        </tr>
+	    <tr>
+	      <th scope="row">バナーサイズ</th>
+	      <td><p>３展開</p>
+          <p>・300×250</p>
+          <p>・320×100</p>
+          <p>・160×600</p></td>
+        </tr>
+	    <tr>
+	      <th scope="row">内容</th>
+	      <td>駅でレンタル、駅で返却<br>
+	        　　　レンタル傘　レンタル料120円<br>
+	        　　　最大48時間レンタル可能<br>
+	        　　　専用アプリから即バーコード決済<br>
+          　　　事前のアプリのダウンロードが必要です。</td>
+        </tr>
+		   <tr>
+	      <th scope="row">制作時間</th>
+	      <td><p>３時間</p></td>
+        </tr>
+		   <tr>
+	      <th scope="row">使用ツール</th>
+	      <td><div class="tool-tags">
+  <span class="tool-tag tool-ps">
+    <span class="tool-icon">Ps</span>
+    Photoshop
+  </span>
+
+  <span class="tool-tag tool-ai">
+    <span class="tool-icon">Ai</span>
+    Illustrator
+  </span>
+</div></td>
+        </tr>
+      </tbody>
+	  </table>
+	</div>
+		
+		 <!-- ================= gotop ================= -->
+	<div id="gotop"><a href="#top"><img src="../img/gotop.png" width="76" height="103" alt=""/></a></div>
+		
+    <!-- ================= footer ================= -->
+ <p class="footer-line">
+  <img src="../img/Vector 12.png" width="1010" height="98" alt="">
+</p>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+
+    <!-- 左：イラスト -->
+    <div class="site-footer__illust">
+      <img src="../img/footerimg_black.svg" width="490" height="300" alt="">
+    </div>
+	
+	 <!-- 右：メニュー -->
+    <nav class="footer-nav">
+      <ul>
+         <li><a href="../index.html#top">Top</a></li>
+      <li><a href="../index.html#works">Works</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</footer>
+	
+
+<div id="footertext">&copy; Kana Uchida</div>
+<br>
+	<br>
+
+	
+	
+	
+	<script src="../js/jquery-3.7.1.min.js"></script>
+	
+	<script>
+	// ----ヘッダーのラインがふわって消えるやつ----　//
+window.addEventListener("scroll", () => {
+  const line = document.querySelector(".header-line");
+  if (!line) return;
+
+  const start = 70;   // 消え始めるスクロール量(px)
+  const end = 200;    // 完全に消える位置(px)
+
+  const y = window.scrollY;
+
+  let progress = (y - start) / (end - start);
+  progress = Math.min(Math.max(progress, 0), 1);
+
+  // 0% → 100%（右から削る）
+  line.style.setProperty("--clip", `${progress * 100}%`);
+});
+		
+		
+
+$(function(){
+  $(".nav-button").on("click", function(){
+    $("body").toggleClass("menu-open");
+
+    const opened = $("body").hasClass("menu-open");
+    $(this).attr("aria-expanded", opened ? "true" : "false");
+  });
+
+  $("nav a").on("click", function(){
+    $("body").removeClass("menu-open");
+    $(".nav-button").attr("aria-expanded", "false");
+  });
+});
+
+		
+		
+		
+		
+		
+		
+		
+</script>
+	
+	
+	
+	
+	
+</body>
+</html>

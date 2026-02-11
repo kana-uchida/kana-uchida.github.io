@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+
+/* ===== WEBサイトタイトル ===== */
+h2 {
+	color: #8E9490;
+}
+
+/* ===== WEBサイトタイトルの前に縦線 ===== */
+h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+  width: 4px;
+  height: 1.4em;
+  background-color: #7a7a7a;
+}
+
+/* ===== WEBサイトを見る ボタン ===== */
+.site-button{
+  background-color: #8E9490;
+  box-shadow: 0 10px 24px rgba(142, 148, 144, 0.28);
+}
+
+/* hover */
+.site-button:hover{
+  box-shadow: 0 14px 32px rgba(142, 148, 144, 0.28);
+  background-color: #8E9490;
+}
+
+
+.work-summary{
+  background: rgba(255,255,255,0.7);
+}
+
+
+.pointtitle{
+  color: #8E9490;
+}
+
+/* 指輪 */
+.pointtitle::before{
+  content: "\01F48D";
+}
+
+/* 「指示内容」の文字　*/
+.instruction details{
+  background: #f6f6f6;
+}
+/* 指示内容の背景　*/
+.instruction summary{
+  color: #8E9490;
+}

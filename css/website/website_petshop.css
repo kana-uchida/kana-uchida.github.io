@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+/* ===== WEBサイトタイトル ===== */
+h2 {
+	color: #8FAFA3;
+}
+
+/* ===== WEBサイトタイトルの前に縦線 ===== */
+h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+  width: 4px;
+  height: 1.4em;
+  background-color: #6B8F7A;
+}
+
+/* ===== WEBサイトを見る ボタン ===== */
+.site-button{
+  background-color: #6B8F7A;
+  box-shadow: 0 10px 24px rgba(72, 131, 98, 0.25);
+}
+
+/* hover */
+.site-button:hover{
+  box-shadow: 0 14px 32px rgba(72, 131, 98, 0.35);
+  background-color: #8FAFA3;
+}
+
+.work-summary{
+  background: rgba(255,255,255,0.7);
+}
+
+.pointtitle{
+  color: #488362;
+}
+
+/* 肉球 */
+.pointtitle::before{
+  content: "\01F43E";
+}
+
+/* 「指示内容」の文字　*/
+.instruction summary{
+  color: #8E9490;
+}
+
+/* 指示内容の背景　*/
+.instruction details{
+  background: #F3F7F1;
+}

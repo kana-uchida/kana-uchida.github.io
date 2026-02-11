@@ -1,0 +1,322 @@
+@charset "utf-8";
+
+/* ===== Header ===== */
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255,255,255,0.7);
+  gap: 16px;
+  position: relative; /* ←スマホnav(absolute)の基準 */
+}
+
+.fixed{
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+
+  width: 100%;
+  max-width: 980px;
+  box-sizing: border-box;
+}
+
+/* ヘッダーの下にコンテナ潜らせないようにする */
+.container{
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+	  padding-top: 190px; 
+}
+
+/* ロゴ（魚マーク + タイトル） */
+.rogoh1{
+  display: flex;
+  align-items: center;
+  gap: 14px;          /* ←ロゴとタイトルの間 */
+  padding: 0 20px;
+}
+
+/* ロゴ画像：余計なmarginを消して統一 */
+.rogoh1 img{
+  margin: 0;
+  height: 50px;
+  display: block;
+}
+
+
+
+/* ===== Navigation ===== */
+
+/* PCではナビ表示 */
+header nav{
+  display: block;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  margin: 0 40px;
+}
+
+nav li {
+  position: relative;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+
+/* ハンバーガーボタン見た目 */
+.nav-button{
+  display: none; /* PCでは消す */
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.nav-button span{
+  display: block;
+  width: 24px;
+  height: 2px;
+  margin: 6px auto;
+  background: #333;
+}
+
+
+/* ===== Footer ===== */
+footer {
+  display: flex;
+  justify-content: center;
+  column-gap: 30px;
+}
+
+.footer-nav ul {
+  display: block;
+  margin: 40px 0;
+}
+
+.footer-nav li {
+  margin-bottom: 15px;
+}
+
+.footer-nav a {
+  color: #666;
+  font-size: 14px;
+}
+
+#footertext {
+  text-align: center;
+}
+
+
+
+
+/* フッター上の区切り線（Vector12） */
+.footer-line{
+  margin: 40px 0 0;
+  text-align: center;
+}
+.footer-line img{
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+/* ===== footer 本体 ===== */
+.site-footer{
+  padding: 10px 0 20px;
+}
+
+.site-footer__inner{
+  display: flex;
+  justify-content: center;     /* 全体を中央に寄せる */
+  align-items: center;
+  gap: 80px;                   /* 左右の間隔 */
+  padding: 10px 40px;
+}
+
+/* 左：イラスト */
+.site-footer__illust img{
+  display: block;
+  max-width: 520px;
+  width: 100%;
+  height: auto;
+}
+
+/* 右：フッターナビ */
+.footer-nav ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;      /* 縦並び */
+  gap: 16px;
+}
+
+.footer-nav a{
+  text-decoration: none;
+  color: #666;
+  font-size: 14px;
+}
+
+/* © 表記 */
+#footertext{
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+  padding: 10px 0 30px;
+}
+
+/* 魚が泳ぐ */
+.fish {
+  position: fixed;
+  top: 50%;
+  width: 240px;
+  height: auto;
+  background: url('fish.svg') no-repeat;
+  background-size: contain;
+  opacity: 0;
+  will-change: transform, left, top;
+}
+
+
+
+#gotop {
+  position: fixed;
+  right: 50px;
+  bottom: 100px;
+  width: 60px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+/* まずはタブレット以下の基準 */
+@media (max-width: 900px) {
+  header {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 0;
+  }
+
+  .fixed {
+    width: min(980px, 100%);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .mainimage img {
+    margin-top: 140px; /* 固定ヘッダーの高さ次第で調整 */
+  }
+}
+
+
+
+
+@media (max-width: 600px){
+  /* PCナビは隠す */
+  header nav{
+    display: none;
+    position: absolute;
+    top: 100%;     /* headerの下に出す */
+    left: 0;
+    right: 0;
+    background: rgba(255,255,255,0.95);
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+
+  /* ハンバーガーは表示 */
+  .nav-button{
+    display: block;
+  }
+
+  /* スマホのナビを縦並び */
+  header nav ul{
+    flex-direction: column;
+    gap: 12px;
+    margin: 0;
+  }
+
+/* 開いたときだけnav表示（スマホ想定） */
+body.menu-open header nav{
+  display: block;
+    margin-top: 30px;  /* メニューを下に下げて、ベクター３に被らないように */
+}
+
+
+/* ===== スマホ：ヘッダーは1行固定＆右端にハンバーガー ===== */
+  header{
+    flex-wrap: nowrap;          /* ← wrap させない */
+    align-items: center;
+  }
+
+  .rogoh1{
+    flex: 1;                    /* ← 左側を伸ばす */
+    padding: 0 12px;
+    min-width: 0;              
+  }
+
+  .nav-button{
+    margin-left: auto;        
+  }
+
+  .rogoh1 h1{
+    font-size: 22px;          
+    line-height: 1.1;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* スマホは縦積み */
+@media (max-width: 800px){
+  .site-footer__inner{
+    flex-direction: column;
+    gap: 20px;
+  }
+	
+	/* メニューOPEN時（×に変形） */
+body.menu-open .nav-button span:nth-child(1){
+  transform: translateY(8px) rotate(135deg);
+}
+
+body.menu-open .nav-button span:nth-child(2){
+  opacity: 0;
+}
+
+body.menu-open .nav-button span:nth-child(3){
+  transform: translateY(-8px) rotate(-135deg);
+}
+
+
+	.nav-button span{
+  transition: transform 0.4s cubic-bezier(.68,-0.55,.27,1.55),
+              opacity 0.3s ease;
+}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+/* =========================
+   見出し（紹介ページ用）
+========================= */
+h2{
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 24px;
+}
+
+h2::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+  width: 4px;
+  height: 1.4em;
+  background-color: #c6a272;
+}
+
+/* =========================
+   画像＋説明文（横並び）
+========================= */
+.caption{
+  display: flex;
+  gap: 24px;              /* 画像と文章の間隔 */
+  margin-top: 20px;
+  align-items: flex-start;
+}
+
+/* =========================
+   仕様/概要テーブル
+========================= */
+table{
+  width: 1000px;
+  border-collapse: collapse;
+  margin: 50px auto;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+th{
+  width: 180px;
+  color: #c6a272;
+  text-align: left;
+  padding: 12px 16px;
+  vertical-align: top;
+  font-weight: bold;
+}
+
+td{
+  padding: 12px 16px;
+  line-height: 1.6;
+}
+
+tr:not(:last-child) th,
+tr:not(:last-child) td{
+  border-bottom: 1px solid #e6ddea;
+}
+
+
+

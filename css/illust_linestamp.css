@@ -1,0 +1,116 @@
+@charset "UTF-8";
+
+/* ===== WEBサイトタイトルの前に縦線 ===== */
+h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+  width: 4px;
+  height: 1.4em;
+  background-color: #9FBFE2;
+}
+
+h2{
+    color: #6FA4D2;
+}
+
+/* ===== 販売サイトを見る ボタン ===== */
+.site-button{
+  background-color: #9ddfa1;
+  box-shadow: 0 10px 24px rgba(142, 148, 144, 0.28);
+}
+
+/* hover */
+.site-button:hover{
+  box-shadow: 0 14px 32px rgba(142, 148, 144, 0.28);
+  background-color: #b1e6b1;
+}
+
+
+
+
+.stamp-intro {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.stamp-intro-image img {
+  max-width: 300px;
+  width: 100%;
+}
+
+.stamp-intro-text {
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+
+.stamp-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.stamp-grid img {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 8px;
+}
+
+.pointtitle{
+  color: #9FBFE2;
+}
+
+/* スマホの絵文字 */
+.pointtitle::before{
+content: "\1F4F1";
+}
+
+
+/* ===== 小さいアイコン部分 ===== */
+.tool-icon{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 22px;
+  height: 22px;
+
+  border: 1.5px solid #91bdd7;
+  border-radius: 6px; /* ← ちょい角丸でAdobe感 */
+
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* Photoshop用（今は見た目同じ） */
+.tool-tag--ps .tool-icon{
+  letter-spacing: -0.02em;
+}
+
+
+
+
+/* スマホ */
+@media (max-width: 600px) {
+  .stamp-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+
+  .stamp-intro {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .stamp-intro-image img {
+    max-width: 220px;
+  }
+}

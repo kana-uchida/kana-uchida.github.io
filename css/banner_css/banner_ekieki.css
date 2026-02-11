@@ -1,0 +1,109 @@
+
+@charset "UTF-8";
+
+/* =========================
+   見出し（紹介ページ用）
+========================= */
+h2{
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 24px;
+}
+
+h2::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+  width: 4px;
+  height: 1.4em;
+  background-color: #4FB7C5;
+}
+
+/* =========================
+   画像＋説明文（横並び）
+========================= */
+.caption{
+  display: flex;
+  gap: 24px;              /* 画像と文章の間隔 */
+  margin-top: 20px;
+  align-items: flex-start;
+}
+
+/* =========================
+   仕様/概要テーブル
+========================= */
+table{
+  width: 100%;
+  max-width: 1000px;
+  margin: 50px auto;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+th{
+  width: 180px;
+  color: #4FB7C5;
+  text-align: left;
+  padding: 12px 16px;
+  vertical-align: top;
+  font-weight: bold;
+}
+
+td{
+  padding: 12px 16px;
+  line-height: 1.6;
+}
+
+tr:not(:last-child) th,
+tr:not(:last-child) td{
+  border-bottom: 1px solid #e6ddea;
+}
+
+
+/* 固定ヘッダーぶん、本文を下げる */
+.container{
+  padding-top: 170px; /* ← ヘッダーの実高さに合わせて微調整(160〜200くらい) */
+}
+
+
+/* スマホ：画像(3枚まとまり) → 文章 → ロゴ の順に縦並び */
+@media (max-width: 600px){
+
+  .banner-area{
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;          /* 各ブロックの間隔 */
+  }
+
+  /* 3枚まとまり画像：画面幅に合わせる */
+  .banner-image img{
+    width: 100%;
+    max-width: 520px;   
+    height: auto;
+    display: block;
+  }
+
+  /* 文章ブロック：横幅いっぱいで読みやすく */
+  .banner-text{
+    max-width: 520px;
+    width: 100%;
+  }
+
+  .banner-text p{
+    margin: 0;         
+    line-height: 1.8;
+  }
+
+  /* ロゴだけの画像：下に置いて中央寄せ */
+  .banner-text img{
+    width: 260px;       
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 16px auto 0; 
+  }
+}
+

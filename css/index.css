@@ -1,0 +1,230 @@
+@charset "utf-8";
+
+
+h2 img {
+  margin: 100px auto 50px;
+}
+
+
+/* 作品画像グリッド */
+.work_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  gap: 30px;
+  justify-content: center;
+}
+
+.work-item {
+  text-align: left;
+}
+
+/* カード枠 */
+.work-item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 300px;
+  height: 220px;
+  padding: 20px;
+
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+
+  box-sizing: border-box;
+}
+
+/* 画像 */
+.work-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+
+/* hover */
+.work-item a:hover img {
+  transform: scale(1.03);
+  transition: transform 0.3s ease;
+}
+
+/* タイトル */
+.work-title-small {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* contactカード */
+.contact-card {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 40px;
+  background-color: #f7f7f7;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.contact-card a {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 12px 24px;
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 999px; /* まるっこボタン */
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-card a:hover {
+  background: #f0f0f0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+
+.skills {
+  display: flex;
+  justify-content: center;
+  column-gap: 40px;
+}
+
+.profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; 
+  gap: 60px;              
+}
+
+#zigazou {
+  flex: 0 0 360px; 
+}
+
+#zigazou img {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+#profiletext {
+  flex: 1;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+#profiletext p {
+  margin: 0 0 10px; 
+}
+
+/* PC（デフォルト） */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+
+@media (max-width: 600px) {
+	
+	 .container{
+    padding: 0 40px;
+    box-sizing: border-box;
+  }
+	
+ 
+	
+  /* ---作品一覧--- */
+	 .work_grid {
+    justify-items: center;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  /* タイトルを中央に */
+  .work-item {
+    text-align: center;
+  }
+
+	
+	
+	
+  .profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+    text-align: left;
+    gap: 0;
+	   height: auto;
+    min-height: 0;
+  }
+
+  #zigazou{
+    margin: 0 0 24px;
+	  flex: 0 0 auto;     
+    width: auto;
+  }
+
+  #zigazou p{
+    margin: 0;
+    line-height: normal;
+  }
+
+  #zigazou img{
+    width: 200px;
+    height: 200px;
+    display: block;
+    object-fit: cover;
+  }
+
+  #profiletext{
+    font-size: 14px;
+    line-height: 1.8;
+    width: 100%;
+    max-width: 520px;
+}
+  
+
+
+/* ===== Skills：スマホは「画像→文章→画像→文章」 ===== */
+
+  /* スキル全体を縦並びに */
+  .skills{
+    flex-direction: column;
+    align-items: stretch;
+    gap: 40px;
+  }
+
+  /* 1スキルずつ縦構成 */
+  .skill-item{
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* 画像を中央に */
+  .skills_img{
+    margin: 0 auto 12px;
+    text-align: center;
+  }
+
+  .skills_img img{
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* 文章は左揃え */
+  .skill-item h4,
+  .skill-item p{
+    text-align: left;
+  }
+}
