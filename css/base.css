@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+html {
+  scroll-padding-top: 200px;
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(0,0,0,1);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+
+/* 画像は親幅に合わせて縮む */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.mainimage img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* コンテナ：固定幅をやめて可変に */
+.container {
+  width: min(980px, 100%);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+
+
+@media (max-width: 600px){
+  .mainimage img{
+    height: 260px;
+    object-fit: contain;
+    background: #fff; /* 余白が出るので背景付けたい */
+  }
+}

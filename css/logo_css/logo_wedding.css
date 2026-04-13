@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+/* ===== WEBサイトタイトル ===== */
+h2 {
+	color: #d6a1b2;
+}
+
+/* ===== WEBサイトタイトルの前に縦線 ===== */
+h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+  width: 4px;
+  height: 1.4em;
+  background-color: #8fb7c9;
+}
+
+/* ===== WEBサイトを見る ボタン ===== */
+.site-button{
+  background-color: #d6a1b2;
+  box-shadow: 0 10px 24px rgba(216, 161, 178, 0.25);
+}
+
+/* hover */
+.site-button:hover{
+  box-shadow: 0 14px 32px rgba(216, 161, 178, 0.35);
+  background-color: #d6a1b2;
+}
+
+.work-summary{
+  background: rgba(255,255,255,0.7);
+}
+
+.pointtitle{
+  color: #8fb7c9;
+}
+
+/* お花 */
+.pointtitle::before{
+  content: "\1F338";
+}
+
+

@@ -1,0 +1,224 @@
+@charset "utf-8";
+
+/* =========================================
+   共通デザイン（このページ用）
+========================================= */
+
+/* 見出し */
+h2 {
+  color: #6e9fd4;
+  position: relative;
+}
+h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+  width: 4px;
+  height: 1.4em;
+  background-color: #f28c8c;
+}
+
+/* ボタン */
+.site-button {
+  background-color: #f28c8c;
+  box-shadow: 0 10px 24px rgba(216, 161, 178, 0.25);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 999px;
+  transition: all 0.3s ease;
+}
+.site-button:hover {
+  background-color: #6e9fd4;
+  box-shadow: 0 14px 32px rgba(216, 161, 178, 0.35);
+}
+
+/* サマリー */
+.work-summary {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* ポイント見出し */
+.pointtitle {
+  color: #6e9fd4;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.pointtitle::before {
+  content: "\1F4D6";
+}
+
+/* =========================================
+   レイアウト
+========================================= */
+
+.illustration-work {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 40px 16px 40px; 
+  box-sizing: border-box;
+}
+
+/* Intro */
+.work-intro {
+  margin-bottom: 20px;
+}
+.work-title {
+  font-size: 22px;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+.work-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  font-size: 14px;
+}
+.work-summary p {
+  margin: 0;
+}
+.work-summary span {
+  font-weight: 700;
+}
+
+/* 制作ポイント */
+.workpoint {
+  margin: 24px 0 32px;
+}
+.workpoint_text {
+  background: #fcf5e9;
+  border-radius: 12px;
+  padding: 18px;
+  line-height: 1.9;
+  font-size: 14px;
+  color: #333;
+  box-sizing: border-box;
+}
+
+/* ボタン周り */
+.work-actions {
+  max-width: 980px;
+  margin: 10px auto 40px;
+  padding: 0 16px;
+}
+
+/* =========================================
+   イラスト共通
+========================================= */
+
+.illustration-work img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* カード */
+.illustration-item {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+}
+
+/* キャプション */
+.illust-caption {
+  margin: 0 0 14px;
+  font-size: 14px;
+  color: rgba(0,0,0,0.55);
+  text-align: center;
+}
+
+/* =========================================
+   メインイラスト
+========================================= */
+
+.illustration-main {
+  margin: 20px 0 40px;
+}
+
+/* 常に2枚横並び */
+.illustration-main .illustration-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+/* =========================================
+   サブイラスト
+========================================= */
+
+.illustration-sub {
+  margin-top: 30px;
+}
+
+/* PC：2カラム */
+.illustration-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+/* 中の画像たち */
+.illustration-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 14px;
+}
+
+.sub-title {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #6e9fd4;
+  background: #eef4fb;
+  border-radius: 999px;
+}
+
+/* =========================================
+   レスポンシブ
+========================================= */
+
+/* タブレット以下 */
+@media (max-width: 900px) {
+  .illustration-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* スマホ */
+@media (max-width: 600px) {
+
+  .illustration-work {
+    padding-top: 40px;
+  }
+
+  .work-title {
+    font-size: 20px;
+  }
+
+  .workpoint_text {
+    padding: 16px;
+  }
+
+  /* サブ：スマホは最大2枚横並び */
+  .illustration-sub .illustration-images {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  /* メイン2枚はスマホでも横並び */
+  .illustration-main .illustration-images {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+}

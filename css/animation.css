@@ -1,0 +1,18 @@
+@charset "utf-8";
+.header-line {
+  display: block;
+  --clip: 0%;
+  clip-path: inset(0 var(--clip) 0 0);
+  transition: clip-path 0.1s linear;
+}
+
+.show {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.show.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
