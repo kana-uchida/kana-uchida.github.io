@@ -236,4 +236,25 @@ h2 img {
   .skill-item p{
     text-align: left;
   }
+	
+/* コンタクトカード */
+	 .contact-card {
+    padding: 40px 20px;
+  }
+
+  .contact-card p:last-child a {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 16px 12px;
+    font-size: clamp(1rem, 4vw, 1.3rem);
+    text-align: center;
+    white-space: nowrap;
+  }
+	
+	
+	
+	
+	
 }

@@ -178,7 +178,6 @@ footer {
   top: 50%;
   width: 240px;
   height: auto;
-  background: url('fish.svg') no-repeat;
   background-size: contain;
   opacity: 0;
   will-change: transform, left, top;
