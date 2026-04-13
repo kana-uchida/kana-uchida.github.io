@@ -1,0 +1,596 @@
+@charset "utf-8";
+
+body,html {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1240px;
+}
+
+.slide img {
+  object-fit: cover;
+  width: 1240px;
+}
+
+.rogo{
+  display: flex;
+  align-items: center;
+  width: auto;   /* ←1240px消す */
+}
+
+
+h1 {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+/* YouTubeエリア：横並び */
+.youtubeflex{
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+/* テキスト側 */
+#youtubetext{
+  flex: 1;
+  min-width: 0;
+  line-height: 1.8;
+}
+
+/* YouTube：画面が広いほど大きく */
+.youtube-embed{
+  flex: 1.2;              /* 動画を少し大きめに */
+  max-width: 720px;       /* でかくなりすぎない上限 */
+  width: 100%;
+  aspect-ratio: 16 / 9;   /* 比率維持 */
+  height: auto;
+  border-radius: 12px;    /* ちょい今っぽく */
+}
+
+
+#gaiyou, .gaiyou {
+  display: flex;
+  padding: 0 50px;
+  justify-content: space-between;
+}
+
+h2{
+  margin: 140px 0 60px;
+  text-align: left;
+  font-size: 32px;
+  font-weight: 700;
+  color: #5FAA74;
+  background: none;          /* ←消す */
+  padding-left: 12px;
+  border-left: 6px solid #DAF8B6; /* ←今っぽい区切り */
+}
+
+
+#newstext{
+  margin-left: 30px;
+  padding: 24px;
+  background: #F6FBF4;
+  border-radius: 16px;
+  border: none;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+}
+
+
+footer {
+  color: #FFFFFF;
+  text-align: center;
+  background-color: #5FAA74;
+  height: 250px;
+  margin-top: 200px;
+  padding-top: 50px;
+  width: 100%;
+}
+
+iframe {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+}
+
+
+/* ===== ヘッダー固定（画像みたいな白帯） ===== */
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* 中身を1240で中央寄せ＋左右配置 */
+.header-inner{
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+/* ロゴエリア（左） */
+.logo{
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+
+.logo img{
+  width: 56px;   /* 好きに調整 */
+  height: auto;
+  display: block;
+}
+
+.rogotext{
+  position: static;       /* ← absoluteをやめる */
+  font-size: 26px;        /* 画像っぽい大きさ */
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #5FAA74;
+  white-space: nowrap;
+}
+
+/* ナビ（右） */
+.nav{
+  position: static;       /* ← fixedをやめる */
+  width: auto;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+
+.nav ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 42px;              /* 画像みたいな間隔 */
+}
+
+.nav a{
+  text-decoration: none;
+  color: #5FAA74;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  padding: 8px 0;
+}
+
+/* hoverはさりげなく */
+.nav a:hover{
+  color: #3e8f5c;
+}
+
+/* 固定ヘッダーに隠れないよう本文を下げる */
+body{
+  padding-top: 90px; /* ヘッダーの高さに合わせて調整 */
+}
+
+
+.nav li {
+  margin: 0 10px;
+}
+
+.nav a::before {
+  content: "🐾";
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%) scale(0.5);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+
+.nav a:hover::before {
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 100px;
+  align-items: center;
+}
+
+.container .flex #omoitext {
+  max-width: 500px;
+}
+
+.ranktext {
+  max-width: 367px;
+}
+
+.container .ranking {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.pagetop {
+  width: 100px;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  display: none;
+}
+
+/* ===== フッターナビ ===== */
+.footer-nav ul{
+  margin: 30px 0 10px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 42px;
+  flex-wrap: wrap;
+}
+
+.footer-nav a{
+  position: relative;          /* ← 肉球の基準 */
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  padding: 8px 0;
+  opacity: 0.85;
+  transition: 0.2s;
+}
+
+/* 🐾 肉球 */
+.footer-nav a::before{
+  content: "🐾";
+  position: absolute;
+  left: -22px;
+  top: 50%;
+  transform: translateY(-50%) scale(0.6);
+  opacity: 0;
+  transition: 0.2s;
+}
+
+/* hover */
+.footer-nav a:hover{
+  opacity: 1;
+}
+
+.footer-nav a:hover::before{
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+}
+
+.footer-nav a:hover::before{
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1) rotate(-5deg);
+}
+
+/* ヘッダーの肉球位置を正しくする */
+.nav a{
+  position: relative;  /* ←これが超重要 */
+  padding-left: 36px;  /* 肉球分の余白（必要なら） */
+  display: inline-block;
+}
+
+.nav a::before{
+  left: 12px; /* そのままでOK */
+}
+
+/* 初期状態：見えない（←全部の .show に適用） */
+.show{
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* 表示状態：ふわっと出る */
+.show.fade-in{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Googleマップはアニメ対象から外す（前に直したやつ） */
+.gaiyou iframe{
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* ===== セクション共通 ===== */
+.section-wrap{
+  padding: 100px 0;
+}
+
+/* 中身はいつものcontainer幅 */
+.section-wrap .container{
+  display: block;
+}
+
+/* 交互に背景を変える */
+.section-wrap:nth-of-type(even){
+  background: #FAFDF9;
+}
+
+
+.slide{
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.slide img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+section[id]{
+  scroll-margin-top: 110px;
+}
+
+/* ===== サイト全体の背景 ===== */
+body{
+  background-image: url("../img/bg_petshop.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* ===== セクションをカード風に ===== */
+.section-wrap .container{
+  background: rgba(255,255,255,0.9);
+  border-radius: 24px;
+  padding: 48px 32px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+}
+
+/* PCではハンバーガーボタンを非表示 */
+.nav-button{
+  display: none;
+}
+
+
+
+
+
+
+/* =========================
+   Responsive (SP) + Hamburger
+   breakpoint: 800px
+   ========================= */
+@media (max-width: 800px){
+
+  /* 余白調整 */
+  .container{
+    padding: 0 16px;
+  }
+
+  /* ヘッダーが固定なので、押し下げを少し増やす */
+  body{
+    padding-top: 90px; /* ヘッダー1段想定。メニュー開閉しても基本これでOK */
+  }
+
+  .header-inner{
+    padding: 12px 16px;
+    gap: 0;
+    position: relative;
+  }
+
+  /* ロゴ行：左にロゴ、右にハンバーガー */
+  .rogo{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo img{
+    width: 44px;
+  }
+
+  .rogotext{
+    font-size: 20px;
+  }
+
+  /* ===== ハンバーガーボタン ===== */
+  .nav-button{
+    appearance: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+  }
+
+  .nav-button span{
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #5FAA74;
+    position: relative;
+    transition: 0.25s;
+  }
+  .nav-button span::before,
+  .nav-button span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background: #5FAA74;
+    transition: 0.25s;
+  }
+  .nav-button span::before{ top: -7px; }
+  .nav-button span::after{ top: 7px; }
+
+  /* ===== メニュー本体（最初は閉じる） ===== */
+  .nav{
+    width: 100%;
+    margin-top: 10px;
+    display: none; /* ←閉 */
+  }
+
+  .nav ul{
+  width: 100%;
+  margin: 0;
+  padding: 10px 0 6px;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 12px;
+}
+
+.nav a{
+  display: block;
+  background: #F6FBF4;
+  border-radius: 12px;
+  padding: 10px 12px 10px 34px;
+  font-size: 14px;
+  color: #5FAA74;
+  text-decoration: none;
+  position: relative;
+}
+
+
+  .nav a::before{
+    content: "🐾";
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%) scale(0.9);
+    opacity: 1; /* スマホは常に出しとくと可愛い */
+  }
+
+  /* ===== 開いた状態（bodyに.menu-openが付く） ===== */
+  body.menu-open .nav{
+    display: block;
+  }
+
+  /* 開いたら×にする */
+  body.menu-open .nav-button span{
+    background: transparent;
+  }
+  body.menu-open .nav-button span::before{
+    top: 0;
+    transform: rotate(45deg);
+  }
+  body.menu-open .nav-button span::after{
+    top: 0;
+    transform: rotate(-45deg);
+  }
+
+  /* ===== スライダー：全幅感 ===== */
+  .slide{
+    padding: 0;
+  }
+
+  /* 見出し */
+  h2{
+    margin: 80px 0 28px;
+    font-size: 22px;
+    border-left-width: 5px;
+    padding-left: 10px;
+  }
+
+  /* 想い：縦積み */
+  .flex{
+    flex-direction: column;
+    padding: 0;
+    gap: 18px;
+  }
+  #omoitext{
+    max-width: 100%;
+  }
+
+  /* NEWS */
+  #newstext{
+    margin-left: 0;
+    padding: 16px;
+  }
+
+  /* RANKING：縦積み */
+  .ranking{
+    flex-direction: column;
+    gap: 28px;
+  }
+  .ranktext{
+    max-width: 100%;
+  }
+
+  /* Youtube：縦積み */
+  .youtubeflex{
+    flex-direction: column;
+    gap: 16px;
+  }
+  .youtube-embed{
+    max-width: 100%;
+  }
+
+  /* 会社概要：縦積み */
+  .gaiyou{
+    flex-direction: column;
+    padding: 0;
+    gap: 16px;
+  }
+  .gaiyou table{
+    width: 100%;
+  }
+  .gaiyou iframe{
+    max-width: 100%;
+    height: 320px;
+  }
+
+  /* pagetop */
+  .pagetop{
+    width: 72px;
+    right: 8px;
+    bottom: 8px;
+  }
+
+  /* footer */
+  footer{
+    height: auto;
+    padding: 32px 16px;
+    margin-top: 120px;
+  }
+  .footer-nav ul{
+    gap: 14px 18px;
+    margin: 16px 0 8px;
+  }
+}
+
+  .section-wrap .container{
+    padding: 32px 20px;
+    border-radius: 16px;
+  }
+
+
