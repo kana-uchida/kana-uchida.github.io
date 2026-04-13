@@ -294,36 +294,50 @@ nav li:hover::after {
   }
 
   /* テーブルをカード化（バナー系で使用） */
-  table {
-    width: 100%;
-    box-shadow: none;
-    background: transparent;
-  }
+table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  box-shadow: none;
+  background: transparent;
+  table-layout: fixed;
+}
 
-  tr {
-    display: block;
-    margin-bottom: 16px;
-    border: 1px solid #e6ddea;
-    border-radius: 8px;
-    padding: 12px;
-    background: #fff;
-  }
+tbody {
+  display: block;
+  width: 100%;
+}
 
-  th, td {
-    display: block;
-    width: 100%;
-    padding: 0;
-  }
+tr {
+  display: block;
+  width: 100%;
+  margin-bottom: 16px;
+  border: 1px solid #e6ddea;
+  border-radius: 8px;
+  padding: 12px;
+  background: #fff;
+  box-sizing: border-box;
+}
 
-  th {
-    margin-bottom: 6px;
-    font-size: 14px;
-  }
+th,
+td {
+  display: block;
+  width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
 
-  td {
-    font-size: 14px;
-    line-height: 1.7;
-  }
+th {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+td {
+  font-size: 14px;
+  line-height: 1.7;
+}
 
   /* webサイトページ（hero） */
   .hero-work {
