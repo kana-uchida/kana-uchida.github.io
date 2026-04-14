@@ -285,6 +285,28 @@ nav li:hover::after {
   line-height: 1.7;
 }
 
+/* カード形式ver */
+.thinking-card {
+  background: #faf7f9;
+  border-radius: 12px;
+  padding: 24px;
+  margin: 40px auto;
+  max-width: 800px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+}
+
+.thinking-card h3 {
+  margin-bottom: 16px;
+}
+
+.thinking-title {
+  font-weight: bold;
+  margin-top: 16px;
+  margin-bottom: 6px;
+}
+
+
+
 /* =========================
    スキルチャート
 ========================= */
