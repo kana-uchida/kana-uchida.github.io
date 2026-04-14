@@ -92,14 +92,19 @@ h2::before {
 .workpoint {
   margin: 24px 0 32px;
 }
+
 .workpoint_text {
   background: #fcf5e9;
   border-radius: 12px;
-  padding: 18px;
+  padding: 24px;
   line-height: 1.9;
   font-size: 14px;
   color: #333;
   box-sizing: border-box;
+
+  width: 100%;
+  max-width: 820px;
+  margin: 0;   /* ← auto をやめる！ */
 }
 
 /* ボタン周り */
@@ -182,6 +187,11 @@ h2::before {
   color: #6e9fd4;
   background: #eef4fb;
   border-radius: 999px;
+}
+
+/* スキルチャートの色 */
+.bar div {
+  background: #f28c8c;
 }
 
 /* =========================================
