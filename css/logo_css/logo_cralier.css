@@ -41,3 +41,8 @@ h2::before {
 .pointtitle::before{
   content: "\1F9F6 ";
 }
+
+/* スキルチャートの色 */
+.bar div {
+  background: #bba48a;
+}
