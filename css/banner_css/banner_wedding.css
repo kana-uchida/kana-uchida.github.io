@@ -33,13 +33,15 @@ h2::before{
    仕様/概要テーブル
 ========================= */
 table{
-  width: 1000px;
+  width: 100%;
+  max-width: 1000px;
   border-collapse: collapse;
   margin: 50px auto;
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   border-radius: 6px;
   overflow: hidden;
+  table-layout: fixed;
 }
 
 th{
@@ -72,4 +74,82 @@ tr:not(:last-child) td{
 .site-button:hover{
   box-shadow: 0 14px 32px rgba(212, 175, 55, 0.35);
   background-color: #E0C35A;
+}
+
+
+/* スキルチャートの色 */
+.bar div {
+  background: #0b1f3a;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .caption{
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .caption img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  table{
+    width: 100%;
+    max-width: 100%;
+    margin: 32px auto;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  tbody{
+    display: block;
+    width: 100%;
+  }
+
+  tr{
+    display: block;
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 16px;
+    border: 1px solid #e6ddea;
+    border-radius: 12px;
+    background: #fff;
+    box-sizing: border-box;
+  }
+
+  th,
+  td{
+    display: block;
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  th{
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+
+  td{
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  tr:not(:last-child) th,
+  tr:not(:last-child) td{
+    border-bottom: none;
+  }
+
+  .tool-tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 }
