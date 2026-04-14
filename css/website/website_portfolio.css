@@ -53,3 +53,7 @@ h2::before {
   color: #8E9490;
 }
 
+/* スキルチャートの色 */
+.bar div {
+  background: #9dd4f1;
+}
