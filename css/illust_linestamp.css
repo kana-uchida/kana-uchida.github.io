@@ -82,7 +82,7 @@ content: "\1F4F1";
   height: 22px;
 
   border: 1.5px solid #91bdd7;
-  border-radius: 6px; /* ← ちょい角丸でAdobe感 */
+  border-radius: 6px; 
 
   font-size: 12px;
   font-weight: 700;
@@ -113,4 +113,9 @@ content: "\1F4F1";
   .stamp-intro-image img {
     max-width: 220px;
   }
+}
+
+/* スキルチャートの色 */
+.bar div {
+  background: #91bdd7;
 }
