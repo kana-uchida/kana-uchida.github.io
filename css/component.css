@@ -66,6 +66,29 @@ nav li:hover::after {
 .workpoint {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin: 80px 0;
+}
+
+.workpoint_text {
+  width: 38%;
+  flex-shrink: 0;
+}
+
+.workpoint_image {
+  width: 58%;
+}
+
+.workpoint_image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+}
+
+.workpoint_text p {
+  line-height: 1.9;
 }
 
 .site-button {
