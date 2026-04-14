@@ -205,7 +205,10 @@ body.is-fixed {
 }
 
 
-
+/* スキルチャートの色 */
+.bar div {
+  background: #0B1F3A;
+}
 
 
 
