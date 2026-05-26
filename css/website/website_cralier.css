@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+
+/* ===== WEBサイトタイトル ===== */
+h2 {
+	color: #7C5B38;
+}
+
+/* ===== WEBサイトタイトルの前に縦線 ===== */
+h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+  width: 4px;
+  height: 1.4em;
+  background-color: #BDA58B;
+}
+
+/* ===== WEBサイトを見るボタン ===== */
+.site-button{
+  background-color: #BDA58B;
+  box-shadow: 0 10px 24px rgba(189, 165, 139, 0.32);
+}
+
+/* hover */
+.site-button:hover{
+  box-shadow: 0 14px 32px rgba(189, 165, 139, 0.4);
+  background-color: #A88E70;
+}
+
+
+.work-summary{
+  background: transparent;
+}
+
+
+.pointtitle{
+  color: #7C5B38;
+}
+
+/* 指示 */
+.pointtitle::before{
+  content: "\01F33F";
+}
+
+/* 指示内容の枠 */
+.instruction details{
+  background: #F5EBE1;
+}
+/* 指示内容の背景 */
+.instruction summary{
+  color: #7C5B38;
+}
+
+/* スキルチャートの色 */
+.bar div {
+  background: #BDA58B;
+}
